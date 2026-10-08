@@ -31,19 +31,22 @@ int main()
     if (v1[0] > v1[1] && v1[0] > v1[2] && v1[0] > v1[3])
     {
         a = v1[0];
+        cout << a;
     }
     else if (v1[1] > v1[0] && v1[1] > v1[2] && v1[1] > v1[3])
     {
         a = v1[1];
+        cout << a;
     }
     else if (v1[2] > v1[0] && v1[2] > v1[1] && v1[2] > v1[3])
     {
         a = v1[2];
+        cout << a;
     }
     else
     {
         a = v1[3];
+        cout << a;
     }
-    cout << a;
     return 0;
 }
