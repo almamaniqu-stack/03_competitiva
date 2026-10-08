@@ -5,7 +5,6 @@ int main()
 {
     char n;
     long int v1[4] = {0, 0, 0, 0};
-    long int a;
     do
     {
         cin >> n;
@@ -28,25 +27,15 @@ int main()
             break;
         }
     } while (n != 'X');
-    if (v1[0] > v1[1] && v1[0] > v1[2] && v1[0] > v1[3])
+    long int a = v1[0];
+    for (int i = 0; i < 3; i++)
     {
-        a = v1[0];
-        cout << a;
+        int aux = v1[i + 1];
+        if (a < aux)
+        {
+            a = aux;
+        }
     }
-    else if (v1[1] > v1[0] && v1[1] > v1[2] && v1[1] > v1[3])
-    {
-        a = v1[1];
-        cout << a;
-    }
-    else if (v1[2] > v1[0] && v1[2] > v1[1] && v1[2] > v1[3])
-    {
-        a = v1[2];
-        cout << a;
-    }
-    else
-    {
-        a = v1[3];
-        cout << a;
-    }
+    cout << a;
     return 0;
 }
